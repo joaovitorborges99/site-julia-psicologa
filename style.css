@@ -1,0 +1,315 @@
+/* ======================================================
+   STYLE.CSS - site Júlia Lessa Ribeiro
+
+
+
+
+
+
+
+
+   Inclui sistema de FAIXAS + FONTES (LORA + INTER)
+   ====================================================== */
+
+/* -------------------- IMPORTAÇÃO DAS FONTES -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap');
+
+/* -------------------- CONFIGURAÇÕES GERAIS -------------------- */
+:root{
+  --bg: #f2e6d9;
+  --muted-bg: #f0d0b1;
+  --text: #703311;
+  --muted: #8a5030;
+  --accent: #703311;
+  --max-width: 1200px;
+  --container-pad: 20px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:"Inter", sans-serif; /* texto padrão */
+  color:var(--text);
+  background-color:var(--bg);
+}
+
+/* -------------------- HEADER / NAV / FOOTER -------------------- */
+header{
+  text-align:center;
+  padding:50px var(--container-pad) 40px;
+}
+
+header h1{
+  font-size:2.7rem;
+  margin:0;
+  font-weight:600;
+  font-family:"Lora", serif; /* título principal */
+  letter-spacing:0.3px;
+  color:var(--text);
+}
+
+header p{
+  margin:12px 0 0 0;
+  color:var(--muted);
+  font-weight:500;
+  font-size:1.35rem;
+  font-family:"Lora", serif; /* subtítulo */
+  letter-spacing:0.2px;
+}
+
+nav{
+  margin-top:22px;
+}
+
+nav a{
+  margin:0 16px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:500;
+  padding-bottom:4px;
+  font-size:1.1rem;
+  font-family:"Lora", serif;
+}
+nav a.ativo{
+  border-bottom:2px solid var(--accent);
+}
+
+footer{
+  text-align:center;
+  padding:28px var(--container-pad);
+  margin-top:48px;
+  color:var(--muted);
+  font-size:0.95rem;
+  font-family:"Inter", sans-serif;
+}
+
+/* -------------------- FAIXA -------------------- */
+.faixa-cinza{
+  background: var(--muted-bg);
+  width: 100%;
+  padding: 80px 0;
+}
+
+/* -------------------- INÍCIO -------------------- */
+.sobre-hero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:48px;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--container-pad);
+  flex-wrap:wrap;
+}
+
+.sobre-texto{
+  flex:1 1 420px;
+  max-width:520px;
+}
+.sobre-texto h2{
+  font-size:2.4rem;
+  margin:0 0 12px;
+  color:var(--text);
+  font-family:"Lora", serif;
+}
+
+/* BOTÃO SOBRE */
+.btn-sobre{
+  display:inline-block;
+  border:1px solid #703311;
+  padding:12px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  color:var(--text);
+  transition:0.2s;
+  font-family:"Inter", sans-serif;
+}
+.btn-sobre:hover{
+  background:#703311;
+  color:#fff;
+}
+
+.sobre-foto{
+  flex:0 0 460px;
+}
+.sobre-foto img{
+  width:100%;
+  height:600px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+/* -------------------- BOTÃO PADRÃO -------------------- */
+.botao{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 24px;
+  background-color:#703311;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s ease;
+  font-family:"Inter", sans-serif;
+}
+.botao:hover{
+  background-color:#5b280e;
+}
+
+/* -------- BLOCO ABAIXO DO HERO -------- */
+main{
+  text-align:center;
+  max-width:900px;
+  margin:48px auto 0;
+  padding:0 var(--container-pad) 60px;
+}
+
+/* =====================================================
+   PÁGINA SOBRE MIM
+   ===================================================== */
+.pagina-sobre .faixa-cinza{
+  background: var(--muted-bg);
+  padding: 80px 0;
+}
+
+.pagina-sobre .sobre-bloco{
+  display:flex;
+  gap:48px;
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--container-pad);
+  align-items:flex-start;
+  flex-wrap:wrap;
+}
+
+.pagina-sobre .sobre-bloco-texto{
+  flex:1 1 520px;
+  max-width:650px;
+}
+
+.pagina-sobre .sobre-bloco-texto p{
+  margin-bottom:14px;
+  line-height:1.6;
+  font-size:1.08rem;
+  color:var(--text);
+  font-family:"Inter", sans-serif;
+}
+
+.pagina-sobre .sobre-bloco-foto{
+  flex:0 0 480px;
+}
+
+.pagina-sobre .sobre-bloco-foto img{
+  width:100%;
+  height:700px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+/* -------------------- DÚVIDAS -------------------- */
+.faq{
+  text-align:left;
+  max-width:800px;
+  margin:40px auto 0;
+}
+
+.faq details{
+  background:#f0d0b1;
+  padding:14px 16px;
+  border-radius:8px;
+  margin-bottom:12px;
+  cursor:pointer;
+}
+
+.faq summary{
+  font-weight:600;
+  font-size:1.15rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:var(--text);
+  font-family:"Lora", serif;
+}
+
+.faq p{
+  margin-top:10px;
+  line-height:1.55;
+  font-size:1rem;
+  color:var(--text);
+  font-family:"Inter", sans-serif;
+}
+
+/* -------------------- CONTATO -------------------- */
+.contato-container{
+  max-width:760px;
+  margin:56px auto;
+  padding:0 var(--container-pad) 60px;
+  text-align:center;
+}
+
+.botao-contato{
+  display:inline-block;
+  padding:12px 26px;
+  background:#703311;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.2s;
+  font-family:"Inter", sans-serif;
+}
+.botao-contato:hover{
+  background:#5b280e;
+}
+
+  .foto-carrosel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.foto-carrosel img {
+    width: 350px;           /* tamanho reduzido */
+    max-width: 90%;
+    border-radius: 18px;    /* borda bonita */
+    border: 3px solid #d9c3ab;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    object-fit: cover;
+}
+
+.foto-carrosel figcaption {
+    font-size: 14px;
+    color: #5a5a5a;
+    font-style: italic;
+    margin-top: 10px;
+}
+/* Aumenta o espaçamento interno do bloco sobre */
+.pagina-sobre .sobre-bloco {
+    padding: 40px var(--container-pad); /* antes era 0, agora tem 40px no topo/baixo */
+}
+
+/* Sombra suave na foto da página Sobre */
+.pagina-sobre .sobre-bloco-foto img {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+
+@media(max-width:720px){
+  .sobre-foto img{ height:420px; }
+  
+  .pagina-sobre .sobre-bloco{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  
+  .pagina-sobre .sobre-bloco-foto img{
+    height:420px;
+  }
+
+
+}
+
+
